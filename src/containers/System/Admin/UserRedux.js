@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import { getAllCodeService } from "../../../services/userService";
-import { LANGUAGES, CRUD_ACTION } from "../../../utils";
+import { LANGUAGES, CRUD_ACTION, CommonUtils } from "../../../utils";
 import * as actions from "../../../store/actions";
 import "./UserRedux.scss";
 import Lightbox from "react-image-lightbox";
@@ -84,18 +84,20 @@ class UserRedux extends Component {
         role: arrRoles && arrRoles.length > 0 ? arrRoles[0].key : "",
         avatar: "",
         action: CRUD_ACTION.CREATE,
+        previewImgURL: ''
       });
     }
   }
 
-  handleOnChangeImage = (e) => {
+  handleOnChangeImage = async (e) => {
     let data = e.target.files;
     let file = data[0];
     if (file) {
+      let base64 = await CommonUtils.getBase64(file)
       let objectURL = URL.createObjectURL(file);
       this.setState({
         previewImgURL: objectURL,
-        avatar: file,
+        avatar: base64,
       });
     }
   };
@@ -115,7 +117,7 @@ class UserRedux extends Component {
       return;
     }
 
-    let { action } = this.state;
+    let { action,avatar } = this.state;
     if (action === CRUD_ACTION.CREATE) {
       this.props.createNewUser({
         email: this.state.email,
@@ -127,6 +129,7 @@ class UserRedux extends Component {
         gender: this.state.gender,
         roleId: this.state.role,
         positionId: this.state.position,
+        avatar: avatar || "",
       });
     }
     if (action === CRUD_ACTION.EDIT) {
@@ -141,7 +144,7 @@ class UserRedux extends Component {
         gender: this.state.gender,
         roleId: this.state.role,
         positionId: this.state.position,
-        // avatar: this.state.avatar
+        avatar: avatar || "",
       });
     }
   };
@@ -169,7 +172,7 @@ class UserRedux extends Component {
     if (!emailRegex.test(this.state[arrCheck[0]])) {
       isValid = false;
       regexError.email = "Please enter a valid email address";
-      alert(regexError.email);
+      alert(regexError.email);  
     }
 
     let passwordRegex = /^.{6,}$/;
@@ -202,7 +205,11 @@ class UserRedux extends Component {
   };
 
   handleEditUserFromParent = (user) => {
-    console.log("parent: ", user);
+    let imageBase64 = "";
+    if(user.image) {
+      imageBase64 = new Buffer(user.image, 'base64').toString('binary');
+    }
+
     this.setState({
       email: user.email,
       password: "cannotchange",
@@ -213,10 +220,11 @@ class UserRedux extends Component {
       gender: user.gender,
       position: user.positionId,
       role: user.roleId,
-      avatar: "",
+      avatar: '',
+      previewImgURL: imageBase64,
       action: CRUD_ACTION.EDIT,
       userEditId: user.id
-    });
+    },() => console.log(this.state));
   };
 
   render() {
