@@ -44,9 +44,9 @@
         margin-bottom: 80px;
 
         .customize-border {
-          border: 1px solid orange;
           padding: 20px;
           margin-bottom: 5px;
+          background-color: #fff;
 
           .outer-bg {
             display: flex;
@@ -57,7 +57,7 @@
             .bg-img {
               width: 120px;
               height: 120px;
-              background-image: url("../../../assets/doctor-of-week/doctor-1.jpg");
+              // background-image: url("../../../assets/doctor-of-week/doctor-1.jpg");
               background-position: center;
               background-repeat: no-repeat;
               background-size: cover;
