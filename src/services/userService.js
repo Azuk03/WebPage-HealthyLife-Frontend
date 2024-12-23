@@ -13,23 +13,41 @@ const createNewUserService = (data) => {
 };
 
 const deleteUserService = (userId) => {
-  return axios.delete('/api/delete-user',{
+  return axios.delete("/api/delete-user", {
     data: {
-      id: userId
-    }
+      id: userId,
+    },
   });
-}
+};
 
 const editUserService = (inputData) => {
-  return axios.put('/api/edit-user', inputData);
-}
+  return axios.put("/api/edit-user", inputData);
+};
 
 const getAllCodeService = (inputType) => {
   return axios.get(`/api/allcode?type=${inputType}`);
-}
+};
 
 const getTopDoctorHomeService = (limit) => {
-  return axios.get(`/api/top-doctor-home?limit=${limit}`)
-}
+  return axios.get(`/api/top-doctor-home?limit=${limit}`);
+};
 
-export { handleLoginApi, getAllUsers, createNewUserService, deleteUserService, editUserService, getAllCodeService, getTopDoctorHomeService };
+const getAllDoctors = () => {
+  return axios.get(`/api/get-all-doctors`);
+};
+
+const saveDetailDoctor = (data) => {
+  return axios.post(`/api/save-info-doctors`, data);
+};
+
+export {
+  handleLoginApi,
+  getAllUsers,
+  createNewUserService,
+  deleteUserService,
+  editUserService,
+  getAllCodeService,
+  getTopDoctorHomeService,
+  getAllDoctors,
+  saveDetailDoctor,
+};

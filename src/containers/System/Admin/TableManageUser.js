@@ -4,6 +4,20 @@ import { connect } from "react-redux";
 import "./TableManageUser.scss";
 import * as actions from "../../../store/actions";
 import _ from 'lodash';
+import MarkdownIt from 'markdown-it';
+import MdEditor from 'react-markdown-editor-lite';
+import 'react-markdown-editor-lite/lib/index.css';
+
+// Register plugins if required
+// MdEditor.use(YOUR_PLUGINS_HERE);
+
+// Initialize a markdown parser
+const mdParser = new MarkdownIt(/* Markdown-it options */);
+
+// Finish!
+function handleEditorChange({ html, text }) {
+  console.log('handleEditorChange', html, text);
+}
 
 class TableManageUser extends Component {
   constructor(props) {
@@ -38,6 +52,7 @@ class TableManageUser extends Component {
     console.log('User', this.props.listUsers);
     let arrUsers = this.state.usersRedux;
     return (
+      <Fragment>
           <table id="table-manage-user">
             <tr>
               <th>Email</th>
@@ -67,6 +82,8 @@ class TableManageUser extends Component {
               })
             }
           </table>
+          <MdEditor style={{ height: '500px' }} renderHTML={text => mdParser.render(text)} onChange={handleEditorChange} />  
+      </Fragment>
     )
   }
 }
