@@ -60,6 +60,9 @@
             "manage-specialty": "Manage Specialty",
             "handbook": "Handbook",
             "manage-handbook": "Manage Handbook"
+        },
+        "doctor": {
+            "manage-schedule": "Manage doctor schedule"
         }
     },
     "manage-user": {
@@ -80,5 +83,19 @@
     "homepage": {
         "outstanding-doctor": "Featured Doctor of the Week",
         "more-information": "See more"
+    },
+    "manage-schedule": {
+        "title": "Doctor's Appointment Schedule",
+        "choose-doctor": "Choose doctor",
+        "choose-date": "Choose date",
+        "save": "Save"
+    },
+    "patient": {
+        "detail-doctor": {
+            "schedule": "Schedule",
+            "none-schedule": "The doctor has no appointments scheduled at this time. Please select another date!",
+            "choose": "Choose",
+            "book-free": "and book (free)"  
+        }
     }
 }

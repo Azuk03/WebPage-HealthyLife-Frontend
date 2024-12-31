@@ -1,0 +1,75 @@
+.doctor-detail-container {
+    height: 500px;
+    
+
+    .intro-doctor {
+        display: flex;
+        margin: 0 100px;
+
+        .content-left {
+            width: 25%;
+            background: center center no-repeat;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 10px 20px;
+        }
+
+        .content-right {
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            padding-left: 10px;
+
+            .up {
+                font-size: 20px;
+                font-size: 600;
+                padding-top: 15px;
+            }
+
+            .down {
+                padding-top: 10px;
+            }
+        }
+    }
+
+    .schedule-doctor {
+        margin: 0 100px;
+        display: flex;
+        padding: 15px 0;
+        min-height: 250px;
+
+        .content-left {
+            width: 50%;
+        }
+
+        .content-right {
+            width: 50%;
+        }
+    }
+
+    .detail-infor-doctor {
+        border-top: 1px solid #aeabab;
+        border-bottom: 1px solid #aeabab;
+        background-color: #f9f9f9;
+        padding: 10px 100px;
+        
+        h1 {
+            font-size: 20px;
+        }
+        h3 {
+            font-size: 16px;
+        }
+        h2 {
+            font-size: 18px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .comment-doctor {
+        height: 50px;
+    }
+}

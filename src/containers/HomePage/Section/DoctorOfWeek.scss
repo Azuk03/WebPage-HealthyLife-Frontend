@@ -36,12 +36,12 @@
     }
 
     .doctor-of-week-body {
-
       .img-customize {
         padding: 5px;
         width: 278px;
         height: 150px;
         margin-bottom: 80px;
+        cursor: pointer;
 
         .customize-border {
           padding: 20px;
@@ -52,8 +52,7 @@
             display: flex;
             justify-content: center;
             margin-bottom: 10px;
-  
-  
+
             .bg-img {
               width: 120px;
               height: 120px;
@@ -66,7 +65,6 @@
             }
           }
         }
-
       }
     }
   }
