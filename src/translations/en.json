@@ -96,7 +96,30 @@
             "none-schedule": "The doctor has no appointments scheduled at this time. Please select another date!",
             "choose": "Choose",
             "book-free": "and book (free)"  
-        }
+        },
+        "extra-infor-doctor": {
+            "text-address": "EXAMINATION ADDRESS",
+            "price": "EXAMINATION PRICE: ",
+            "detail": "View details",
+            "price-lowercase": "Examination price:",
+            "payment": "Patients can pay using the following method: ",
+            "hide-price": "Hide price list"
+        },
+        "booking-modal": {
+            "title": "Appointment Booking Information",
+            "fullName": "Full Name",
+            "phoneNumber": "Phone Number",
+            "email": "Email",
+            "address": "Address",
+            "reason": "Reason for Visit",
+            "birthday": "Date of Birth",
+            "gender": "Gender",
+            "confirm": "Confirm",
+            "cancel": "Cancel",
+            "freeBooking": "Booking free",
+            "priceBooking": "Price: "
+}
+
     },
     "admin": {
         "manage-doctor": {
