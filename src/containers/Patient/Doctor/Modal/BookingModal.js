@@ -163,8 +163,6 @@ class BookingModal extends Component {
         ? dataScheduleTimeModal.doctorId
         : "";
 
-    console.log("Data time: ", dataScheduleTimeModal);
-
     return (
       <Modal
         isOpen={isOpenModal}
@@ -187,6 +185,8 @@ class BookingModal extends Component {
                 doctorId={doctorId}
                 isShowDescriptionDoctor={false}
                 dataScheduleTimeModal = {dataScheduleTimeModal}
+                isShowPrice = {true}
+                isShowLinkDetail = {false}
               />
             </div>
             <div className="row">

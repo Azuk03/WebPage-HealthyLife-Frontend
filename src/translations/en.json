@@ -82,7 +82,8 @@
     },
     "homepage": {
         "outstanding-doctor": "Featured Doctor of the Week",
-        "more-information": "See more"
+        "more-information": "See more",
+        "specialty-popular": "Popular Specialty"
     },
     "manage-schedule": {
         "title": "Doctor's Appointment Schedule",
@@ -133,7 +134,9 @@
             "province": "Province",
             "name-clinic": "Clinic's name",
             "address-clinic": "Clinic's address",
-            "note": "Note"
+            "note": "Note",
+            "specialty": "Choose specialty",
+            "select-clinic": "Select clinic"
         }
     }
 }
