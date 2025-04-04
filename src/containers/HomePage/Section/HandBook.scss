@@ -1,65 +1,61 @@
 .section-handbook {
-    height: 330px;
-    background-color: #f5f5f5;
-  
-  
-    .handbook-container {
-      margin: 0 100px;
-      display: flex;
-      flex-direction: column;
-  
-      .handbook-header {
-        height: 60px;
-        margin-bottom: 30px;
-        padding-top: 30px;
-  
-        .title-section {
-          font-size: 22px;
-          font-weight: 600;
-        }
-  
-        .btn-section {
-          float: right;
-          padding: 5px 10px;
-          border: none;
-          outline: none;
-          display: block;
-          background-color: #ebebeb;
-          cursor: pointer;
-          color: black;
-          text-transform: uppercase;
-  
-          &:hover {
-              color: #fff;
-              background-color: #e7d800;
-          }
-        }
-      }
-  
-      .handbook-body {
-  
-          .img-customize {
-              padding: 0 7px;
-              width: 278px;
-              height: 170px;
+  height: 330px;
+  background-color: #f5f5f5;
 
-              .handbook-name {
-                font-size: 17px;
-                text-align: center;
-              }
-      
-            .bg-img {
-              width: 100%;
-              height: 100%;
-              background-image: url('../../../assets/handbook/tu-van-hon-nhan.jpg');
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: cover;
-              background-color: #eee;
-            }
-          }
-  
+  .handbook-container {
+    margin: 0 100px;
+    display: flex;
+    flex-direction: column;
+
+    .handbook-header {
+      height: 60px;
+      margin-bottom: 30px;
+      padding-top: 30px;
+
+      .title-section {
+        font-size: 22px;
+        font-weight: 600;
       }
-  
+
+      .btn-section {
+        float: right;
+        padding: 5px 10px;
+        border: none;
+        outline: none;
+        display: block;
+        background-color: #ebebeb;
+        cursor: pointer;
+        color: black;
+        text-transform: uppercase;
+
+        &:hover {
+          color: #fff;
+          background-color: #e7d800;
+        }
+      }
+    }
+
+    .handbook-body {
+      .img-customize {
+        padding: 0 7px;
+        width: 278px;
+        height: 170px;
+
+        .handbook-name {
+          font-size: 17px;
+          text-align: center;
+        }
+
+        .bg-img {
+          width: 100%;
+          height: 100%;
+          background-image: url("../../../assets/handbook/tu-van-hon-nhan.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-color: #eee;
+        }
+      }
     }
   }
+}

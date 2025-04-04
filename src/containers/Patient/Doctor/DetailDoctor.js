@@ -26,8 +26,8 @@ class DetailDoctor extends Component {
     ) {
       let id = this.props.match.params.id;
       this.setState({
-        currentDoctorId: id
-      })
+        currentDoctorId: id,
+      });
       let res = await getDetailInforDoctor(id);
       if (res && res.errCode === 0) {
         this.setState({
@@ -42,14 +42,16 @@ class DetailDoctor extends Component {
   render() {
     let { detailDoctor } = this.state;
     let { language } = this.props;
-    let nameVi = '';
-    let nameEn = '';
+    let nameVi = "";
+    let nameEn = "";
     if (detailDoctor && detailDoctor.positionData) {
-       nameVi = `${detailDoctor.positionData.valueVi}: ${detailDoctor.lastName} ${detailDoctor.firstName}`;
-       nameEn = `${detailDoctor.positionData.valueEn}: ${detailDoctor.firstName} ${detailDoctor.lastName}`;
+      nameVi = `${detailDoctor.positionData.valueVi}: ${detailDoctor.lastName} ${detailDoctor.firstName}`;
+      nameEn = `${detailDoctor.positionData.valueEn}: ${detailDoctor.firstName} ${detailDoctor.lastName}`;
     }
-    let currentURL = process.env.REACT_APP_IS_LOCALHOST === 1 ? 
-      "https://eric-restaurant-bot-tv.herokuapp.com/" : window.location.href;
+    let currentURL =
+      process.env.REACT_APP_IS_LOCALHOST === 1
+        ? "https://eric-restaurant-bot-tv.herokuapp.com/"
+        : window.location.href;
     return (
       <>
         <HomeHeader isShowBanner={false} />
@@ -64,32 +66,42 @@ class DetailDoctor extends Component {
               }}
             ></div>
             <div className="content-right">
-              <div className="up">{language === LANGUAGES.VI ? nameVi : nameEn}</div>
+              <div className="up">
+                {language === LANGUAGES.VI ? nameVi : nameEn}
+              </div>
               <div className="down">
                 {detailDoctor.Markdown && detailDoctor.Markdown.description && (
                   <span>{detailDoctor.Markdown.description}</span>
                 )}
                 <div className="like-share-plugin">
-                  <LikeAndShare dataHref = {currentURL} />
+                  <LikeAndShare dataHref={currentURL} />
                 </div>
               </div>
             </div>
           </div>
           <div className="schedule-doctor">
-                <div className="content-left">
-                    <DoctorSchedule doctorIdFromParent = {this.state.currentDoctorId} />
-                </div>
-                <div className="content-right">
-                  <DoctorExtraInfor doctorIdFromParent = {this.state.currentDoctorId} />
-                </div>
+            <div className="content-left">
+              <DoctorSchedule doctorIdFromParent={this.state.currentDoctorId} />
+            </div>
+            <div className="content-right">
+              <DoctorExtraInfor
+                doctorIdFromParent={this.state.currentDoctorId}
+              />
+            </div>
           </div>
           <div className="detail-infor-doctor">
-            {detailDoctor && detailDoctor.Markdown && detailDoctor.Markdown.contentHTML &&
-                <div dangerouslySetInnerHTML={{__html: detailDoctor.Markdown.contentHTML }}></div>
-            }
+            {detailDoctor &&
+              detailDoctor.Markdown &&
+              detailDoctor.Markdown.contentHTML && (
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: detailDoctor.Markdown.contentHTML,
+                  }}
+                ></div>
+              )}
           </div>
           <div className="comment-doctor">
-            <Comment dataHref = {currentURL} width = {"100%"} />
+            <Comment dataHref={currentURL} width={"100%"} />
           </div>
         </div>
       </>

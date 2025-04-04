@@ -2,7 +2,6 @@
   height: 330px;
   background-color: #e9e7e7;
 
-
   .specialty-container {
     margin: 0 100px;
     display: flex;
@@ -30,50 +29,45 @@
         text-transform: uppercase;
 
         &:hover {
-            color: #fff;
-            background-color: #e7d800;
+          color: #fff;
+          background-color: #e7d800;
         }
       }
     }
 
     .specialty-body {
+      .img-customize {
+        padding: 0 7px;
+        width: 278px;
+        height: 170px;
 
-        .img-customize {
-            padding: 0 7px;
-            width: 278px;
-            height: 170px;
-
-            .specialty-name {
-              font-size: 17px;
-              text-align: center;
-            }
-    
-          .bg-img {
-            width: 100%;
-            height: 100%;
-            background-image: url('../../../assets/specialty/co-xuong-khop.png.jpg');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-color: #eee;
-          }
+        .specialty-name {
+          font-size: 17px;
+          text-align: center;
         }
 
-        .specialty-child {
-          cursor: pointer;
+        .bg-img {
+          width: 100%;
+          height: 100%;
+          background-image: url("../../../assets/specialty/co-xuong-khop.png.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-color: #eee;
+        }
+      }
 
-          .specialty-name {
-            padding: 10px 0;
+      .specialty-child {
+        cursor: pointer;
 
-            &:hover {
-              color: #45c3c2;
-            }
+        .specialty-name {
+          padding: 10px 0;
+
+          &:hover {
+            color: #45c3c2;
           }
         }
-
+      }
     }
-
   }
 }
-
-
