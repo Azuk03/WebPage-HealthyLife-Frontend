@@ -1,0 +1,71 @@
+.section-doctor-of-week {
+  height: 330px;
+  background-color: #e9e7e7;
+
+  .doctor-of-week-container {
+    margin: 0 100px;
+    display: flex;
+    flex-direction: column;
+
+    .doctor-of-week-header {
+      height: 60px;
+      margin-bottom: 30px;
+      padding-top: 30px;
+
+      .title-section {
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      .btn-section {
+        float: right;
+        padding: 5px 10px;
+        border: none;
+        outline: none;
+        display: block;
+        background-color: #ebebeb;
+        cursor: pointer;
+        color: black;
+        text-transform: uppercase;
+
+        &:hover {
+          color: #fff;
+          background-color: #e7d800;
+        }
+      }
+    }
+
+    .doctor-of-week-body {
+      .img-customize {
+        padding: 5px;
+        width: 278px;
+        height: 150px;
+        margin-bottom: 80px;
+        cursor: pointer;
+
+        .customize-border {
+          padding: 20px;
+          margin-bottom: 5px;
+          background-color: #fff;
+
+          .outer-bg {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+
+            .bg-img {
+              width: 120px;
+              height: 120px;
+              // background-image: url("../../../assets/doctor-of-week/doctor-1.jpg");
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-color: #eee;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

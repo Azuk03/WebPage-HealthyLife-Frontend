@@ -1,0 +1,143 @@
+{   
+    "homeheader" : {
+        "specialty": "Specialty",
+        "finddoctorbyspecialty": "Find doctor by specialty",
+        "healthcare-facility": "Healthcare facility",
+        "choose-clinic": "Select hospital clinic",
+        "doctor": "Doctor",
+        "choose-doctor": "Choose a good doctor",
+        "medical-package": "Medical package",
+        "general-check-up": "General health check-up",
+        "support": "Support",
+        "welcome": "Welcome"
+    },
+    "banner" : {
+        "title-1": "HEALTHCARE PLATFORM",
+        "title-2": "COMPREHENSIVE HEALTHCARE",
+        "specialist-examination": "Specialist examination",
+        "remote-consultation": "Remote consultation",
+        "general-check-up": "General check-up",
+        "medical-test": "Medical test",
+        "mental-health": "Mental health",
+        "dental-check-up": "Dental check-up"
+    },
+    "common": {
+        "add": "Add",
+        "edit": "Edit",
+        "delete": "Delete",
+        "decentralize": "Decentralize",
+        "close": "Close",
+        "save": "Save",
+        "refresh": "Refresh",
+        "accept": "Accept",
+        "confirm": "Confirm",
+        "confirm-this-task": "Are you sure to process this task?",
+        "fail-to-load-data": "Fail to load data",
+        "unknown-error": "There was an error",
+        "internal-server-error": "Internal server error",
+        "bad-request": "Bad request",
+        "forbiden-request": "Invalid input data",
+        "fail-to-load-all-code": "Fail to load data from allcode",
+        "sum": "Sum",
+        "date-range-invalid": "Date range invalid"
+    },
+    "login": {
+        "login": "Login",
+        "username": "Username",
+        "password": "Password",
+        "userpass-wrong": "Invalid username or password!"
+    },
+    "menu": {
+        "admin": {
+            "manage-user": "Manage User",
+            "manage-doctor": "Manage Doctor",
+            "manage-admin": "Manage Admin",
+            "crud": "CRUD user",
+            "crud-redux": "CRUD redux",
+            "clinic": "Clinic",
+            "manage-clinic": "Manage Clinic",
+            "specialty": "Specialty",
+            "manage-specialty": "Manage Specialty",
+            "handbook": "Handbook",
+            "manage-handbook": "Manage Handbook"
+        },
+        "doctor": {
+            "manage-schedule": "Manage doctor schedule",
+            "manage-patient": "Manage patient"
+        }
+    },
+    "manage-user": {
+        "add": "Add a new user",
+        "email": "Email",
+        "password": "Password",
+        "first-name": "First name",
+        "last-name": "Last name",
+        "phone-number": "Phone number",
+        "address": "Address",
+        "gender": "Gender",
+        "position": "Position",
+        "role": "Role",
+        "image": "Set Avatar",
+        "save": "Save",
+        "edit": "Edit user"
+    },
+    "homepage": {
+        "outstanding-doctor": "Featured Doctor of the Week",
+        "more-information": "See more",
+        "specialty-popular": "Popular Specialty"
+    },
+    "manage-schedule": {
+        "title": "Doctor's Appointment Schedule",
+        "choose-doctor": "Choose doctor",
+        "choose-date": "Choose date",
+        "save": "Save"
+    },
+    "patient": {
+        "detail-doctor": {
+            "schedule": "Schedule",
+            "none-schedule": "The doctor has no appointments scheduled at this time. Please select another date!",
+            "choose": "Choose",
+            "book-free": "and book (free)"  
+        },
+        "extra-infor-doctor": {
+            "text-address": "EXAMINATION ADDRESS",
+            "price": "EXAMINATION PRICE: ",
+            "detail": "View details",
+            "price-lowercase": "Examination price:",
+            "payment": "Patients can pay using the following method: ",
+            "hide-price": "Hide price list"
+        },
+        "booking-modal": {
+            "title": "Appointment Booking Information",
+            "fullName": "Full Name",
+            "phoneNumber": "Phone Number",
+            "email": "Email",
+            "address": "Address",
+            "reason": "Reason for Visit",
+            "birthday": "Date of Birth",
+            "gender": "Gender",
+            "confirm": "Confirm",
+            "cancel": "Cancel",
+            "freeBooking": "Booking free",
+            "priceBooking": "Price: "
+}
+
+    },
+    "admin": {
+        "manage-doctor": {
+            "title": "Create more doctor information",
+            "select": "Select doctor",
+            "intro": "Introduction Information:",
+            "add": "Create information",
+            "save": "Save information",
+            "price": "Price",
+            "payment": "Payment",
+            "province": "Province",
+            "name-clinic": "Clinic's name",
+            "address-clinic": "Clinic's address",
+            "note": "Note",
+            "specialty": "Choose specialty",
+            "select-clinic": "Select clinic"
+        }
+    }
+}

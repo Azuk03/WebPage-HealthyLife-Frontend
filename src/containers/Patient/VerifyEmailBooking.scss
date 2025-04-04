@@ -1,0 +1,19 @@
+.verify-email-container {
+    .booking-success {
+        font-size: 17px;
+        font-weight: 600;
+        margin-top: 30px;
+        text-align: center;
+        text-transform: uppercase;
+        color: green;
+    }
+
+    .booking-failed {
+        font-size: 17px;
+        font-weight: 600;
+        margin-top: 30px;
+        text-align: center;
+        text-transform: uppercase;
+        color: red;
+    }
+}
